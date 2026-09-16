@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: lavender;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    background-color: purple;
+    color: white;
+    padding: 20px;
+    margin: 0;
+}
+
+h2 {
+    text-align: center;
+    color: purple;
+    margin: 30px;
+}
+
+.doctor-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.doctor-card {
+    background-color: white;
+    width: 250px;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 10px gray;
+}
+
+.doctor-card h3 {
+    color: purple;
+}
+
+.doctor-card p {
+    font-size: 16px;
+}
+
+button {
+    background-color: purple;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+}
