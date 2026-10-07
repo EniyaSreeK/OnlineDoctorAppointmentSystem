@@ -35,6 +35,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
   - Replaced corrupted placeholder characters with SVG icons in patient views.
 - **Database Artifact Consolidation**:
   - Consolidated duplicate database seed scripts into a single authoritative location at `db/seed_data.sql` and updated repository setup guides.
+- **Documentation Overhaul**:
+  - Redesigned `README.md` into a structured, modern GitHub showcase with system architecture, module completion matrices, security breakdowns, SRS feature tables, and streamlined setup guides.
 
 ---
 
