@@ -1,8 +1,29 @@
+# Compiled outputs & packages
 target/
 *.class
+*.war
+
+# IDE and Project metadata
 .classpath
 .project
 .settings/
 .vscode/
 .idea/
+*.iml
+
+# Logs and runtime data
 *.log
+logs/
+cookies.txt
+scratch/
+
+# Local configuration files containing credentials/secrets
+*.local.properties
+application.local.properties
+db.local.properties
+src/main/resources/db.properties
+db.properties
+
+# OS specific
+.DS_Store
+Thumbs.db

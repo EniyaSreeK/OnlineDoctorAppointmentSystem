@@ -1,0 +1,32 @@
+# =====================================================================
+# Online Doctor Appointment System (ODAS) - Configuration Template
+# Copy this file to src/main/resources/db.properties or application.local.properties
+# and replace the placeholders with your local environment values.
+# DO NOT commit files containing real credentials to version control.
+# =====================================================================
+
+# ---------------------------------------------------------------------
+# Database Configuration (Oracle Database 21c XE)
+# ---------------------------------------------------------------------
+db.driver=oracle.jdbc.OracleDriver
+db.url=jdbc:oracle:thin:@localhost:1521/xepdb1
+db.username=your_oracle_user
+db.password=your_oracle_password
+
+# ---------------------------------------------------------------------
+# SMS Notification Configuration (Twilio REST API)
+# Optional - defaults to 'mock' if unconfigured
+# ---------------------------------------------------------------------
+ODAS_SMS_PROVIDER=mock
+TWILIO_ACCOUNT_SID=ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+TWILIO_AUTH_TOKEN=your_twilio_auth_token
+TWILIO_FROM_NUMBER=+1234567890
+
+# ---------------------------------------------------------------------
+# Email Notification Configuration (Jakarta Mail over SMTP)
+# Optional - email alerts will be safely skipped if unconfigured
+# ---------------------------------------------------------------------
+ODAS_SMTP_HOST=smtp.example.com
+ODAS_SMTP_PORT=587
+ODAS_SMTP_USER=notifications@hospital.com
+ODAS_SMTP_PASSWORD=your_smtp_app_password
