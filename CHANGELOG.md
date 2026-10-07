@@ -9,7 +9,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 ## [1.2.0] - 2026-10-07
 
 ### Added
-- **Comprehensive Realistic Seed Dataset (`seed_data.sql`)**:
+- **Comprehensive Realistic Seed Dataset (`db/seed_data.sql`)**:
   - 18 new medical specialists across 18 departments (Dentistry, Urology, Oncology, Nephrology, Gastroenterology, Cardiology, Orthopedics, Pediatrics, Neurology, Dermatology, Ophthalmology, ENT, Psychiatry, General Medicine, Endocrinology, Pulmonology, Rheumatology, Plastic Surgery) located across 6 metropolitan cities (Bangalore, Mumbai, Delhi, Hyderabad, Pune, Kolkata).
   - 45 new registered patient accounts with authentic demographics across children (ages 6–17), adults (ages 25–49), and seniors (ages 62–76).
   - 80 linked consultations (42 Completed, 28 Scheduled, 10 Cancelled) complying with active slot uniqueness constraints (`UQ_ACTIVE_APPT_SLOT`, `UQ_ACTIVE_PATIENT_SLOT`).
@@ -33,7 +33,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 - **UI Enhancements (`BUG-2`, `BUG-3`)**:
   - Fixed null booking count display in `admin-dashboard.jsp`.
   - Replaced corrupted placeholder characters with SVG icons in patient views.
-  - Enforced UTF-8 page encoding and Maven build source encoding across all modules.
+- **Database Artifact Consolidation**:
+  - Consolidated duplicate database seed scripts into a single authoritative location at `db/seed_data.sql` and updated repository setup guides.
 
 ---
 

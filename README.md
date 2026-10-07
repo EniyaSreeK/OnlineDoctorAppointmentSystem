@@ -170,18 +170,18 @@ sqlplus odas_user/odas123@localhost:1521/xepdb1 @"src/main/resources/schema.sql"
 To populate an extended dataset with 30 medical specialists across 18 clinical departments and 6 cities, 73 patients, 155 appointments, 80 prescriptions, and 125 payments:
 
 ```sh
-sqlplus odas_user/odas123@localhost:1521/xepdb1 @"seed_data.sql"
+sqlplus odas_user/odas123@localhost:1521/xepdb1 @"db/seed_data.sql"
 ```
 
-*Note: `seed_data.sql` uses idempotent `MERGE INTO` statements wrapped in a transaction with rollback on error, making it completely safe to re-run multiple times.*
+*Note: `db/seed_data.sql` uses idempotent `MERGE INTO` statements wrapped in a transaction with rollback on error, making it completely safe to re-run multiple times.*
 
 ### Step 3: Configure `db.properties`
-Verify that `src/main/resources/db.properties` matches your local database:
+Verify that `src/main/resources/db.properties` or `application.local.properties` matches your local database:
 ```properties
 db.driver=oracle.jdbc.OracleDriver
 db.url=jdbc:oracle:thin:@localhost:1521/xepdb1
-db.username=odas_user
-db.password=odas123
+db.username=your_oracle_user
+db.password=your_oracle_password
 ```
 
 ---
@@ -191,7 +191,7 @@ db.password=odas123
 The project utilizes Maven for dependency resolution and testing:
 
 ```sh
-# Run all automated tests (68 tests)
+# Run all automated tests (121 tests)
 mvn clean test
 
 # Package into WAR file
